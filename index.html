@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a1a12" />
+  <meta name="description" content="Mandrágora Aromaterapia — Aromas con sentido. Productos de aromaterapia con intención." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Mandrágora Aromaterapia | Aromas con sentido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preload" as="image" href="assets/fondo-aromaterapia.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo-mandragora.jpg" type="image/jpeg" />
+
+  <!--
+  ================================================================
+  EDITOR DE PRECIOS — MODIFICAR SOLO ESTE BLOQUE
+  ================================================================
+  Para cambiar los precios del catálogo, buscá este bloque y
+  reemplazá únicamente los valores entre comillas.
+  Ejemplo: "rollon_talisman": "12500"
+
+  No hace falta buscar cada precio dentro de las tarjetas.
+  Los valores se aplican automáticamente a todo el catálogo.
+  ================================================================
+  -->
+  <script>
+    window.MANDRAGORA_PRECIOS = {
+      rollon_talisman: "0.00",
+      rollon_noche_serena: "0.00",
+      rollon_renacer: "0.00",
+      coleccion_roll_ons: "0.00",
+      agua_rosas: "0.00",
+      respira_bruma_unguento: "0.00",
+      sprays_ambientales: "0.00",
+      kit_papa_deportista: "0.00",
+      unguento_romero: "0.00",
+      colgante_amatista: "0.00",
+      agua_rosas_unguento: "0.00",
+      difusor_buda: "0.00"
+    };
+  </script>
+</head>
+<body>
+  <!-- Fondo animado -->
+  <div id="bg-effects">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="noise"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo">
+        <img decoding="async" src="assets/logo-mandragora.jpg" alt="Mandrágora Aromaterapia" class="logo-img" />
+        <span class="logo-text">Mandrágora</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="#inicio">Inicio</a>
+        <a href="#esencia">Esencia</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#rituales">Rituales</a>
+        <a href="#armonizacion">Armonización</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://wa.me/3764572400" target="_blank" rel="noopener" class="btn-wa-header" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <img decoding="async" src="assets/logo-mandragora.jpg" alt="Logo" class="mobile-logo" />
+      <nav>
+        <a href="#inicio" class="mobile-link">Inicio</a>
+        <a href="#esencia" class="mobile-link">Nuestra Esencia</a>
+        <a href="#catalogo" class="mobile-link">Catálogo</a>
+        <a href="#beneficios" class="mobile-link">Beneficios</a>
+        <a href="#rituales" class="mobile-link">Rituales</a>
+        <a href="#armonizacion" class="mobile-link">Armonización</a>
+        <a href="#contacto" class="mobile-link">Contacto</a>
+      </nav>
+      <a href="https://wa.me/3764572400" target="_blank" class="btn btn-gold mobile-wa">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap reveal">
+        <img decoding="async" src="assets/logo-mandragora.jpg" alt="Mandrágora Aromaterapia" class="hero-logo" />
+      </div>
+      <div class="hero-text reveal delay-1">
+        <p class="hero-eyebrow">Aromaterapia con intención</p>
+        <h1 class="hero-title">Mandrágora</h1>
+        <p class="hero-subtitle">Aromaterapia</p>
+        <div class="hero-divider">
+          <span class="line"></span>
+          <span class="diamond">✦</span>
+          <span class="line"></span>
+        </div>
+        <p class="hero-tagline">Aromas con sentido</p>
+        <p class="hero-desc">Productos elaborados con aceites esenciales puros y plantas seleccionadas por su vibración energética.</p>
+        <div class="hero-ctas">
+          <a href="#catalogo" class="btn btn-gold">
+            <span>Descubrir Catálogo</span>
+            <i class="fas fa-arrow-down"></i>
+          </a>
+          <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%2C%20quiero%20conocer%20más%20sobre%20sus%20aromas" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESENCIA -->
+  <section id="esencia" class="section esencia">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">La raíz de todo</span>
+        <h2 class="section-title">Nuestra Esencia</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="esencia-grid">
+        <div class="esencia-text reveal">
+          <p class="lead">
+            En el corazón de la naturaleza antigua, la <strong>mandrágora</strong> ha sido símbolo de magia, sanación y conexión profunda.
+            Nosotros honramos esa herencia creando <em>aromas con intención</em>.
+          </p>
+          <p>
+            Cada fórmula es elaborada con aceites esenciales puros y plantas seleccionadas por su vibración energética.
+            No son solo fragancias: son herramientas sutiles para el bienestar emocional, la limpieza energética y el ritual diario.
+          </p>
+          <p>
+            Trabajamos también con <strong>canalización energética</strong>: cada blend nace de una intención clara,
+            para acompañarte a alinear cuerpo, emoción y espíritu en tu día a día.
+          </p>
+          <p>
+            Desde el roll-on que llevás en el bolsillo hasta la bruma que eleva el ambiente, cada producto de
+            <strong>Mandrágora Aromaterapia</strong> nace con un propósito: ayudarte a conectar con tu esencia.
+          </p>
+          <div class="esencia-stats">
+            <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Natural</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">+</span>
+              <span class="stat-label">Intención</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Rituales</span>
+            </div>
+          </div>
+        </div>
+        <div class="esencia-visual reveal delay-1">
+          <div class="visual-card">
+            <div class="visual-image"><img src="assets/secciones/raiz-ancestral.webp" alt="Raíz Ancestral: naturaleza, raíces y aromaterapia" loading="lazy" decoding="async"></div>
+            <div class="visual-icon">🌳</div>
+            <h3>Raíz Ancestral</h3>
+            <p>Inspirados en la mandrágora y la geometría sagrada.</p>
+          </div>
+          <div class="visual-card">
+            <div class="visual-image"><img src="assets/secciones/canalizacion.webp" alt="Canalización: aroma, calma e intención" loading="lazy" decoding="async"></div>
+            <div class="visual-icon">🔮</div>
+            <h3>Canalización</h3>
+            <p>Cada aroma canaliza una intención emocional y energética.</p>
+          </div>
+          <div class="visual-card">
+            <div class="visual-image"><img src="assets/secciones/glamour-natural.webp" alt="Glamour Natural: belleza y aromas naturales" loading="lazy" decoding="async"></div>
+            <div class="visual-icon">✨</div>
+            <h3>Glamour Natural</h3>
+            <p>Belleza que se siente, se huele y se vive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="section catalogo">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Colección sagrada</span>
+        <h2 class="section-title">Catálogo de Productos</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Aromas con sentido. Cada producto nació con una intención clara.</p>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+
+        <!-- PRODUCTO 1 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/rollon-talisman.jpg" alt="Roll-on Talismán" loading="lazy" />
+            <span class="product-badge">Protección</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Talismán" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Talismán</h3>
+            <p class="product-intention">Protección · Chakra Raíz</p>
+            <p class="product-desc">Protección, purifica energías, limpieza energética, fuerza y estabilidad. Ideal para anclarte y sentirte seguro.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_talisman">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Talismán" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 2 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/rollon-noche-serena.jpg" alt="Roll-on Noche Serena" loading="lazy" />
+            <span class="product-badge">Descanso</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Noche%20Serena" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Noche Serena</h3>
+            <p class="product-intention">Relajación · Chakra Tercer Ojo</p>
+            <p class="product-desc">Relajación, buen descanso, alivio de ansiedad y estabilidad emocional. Perfecto para el ritual nocturno.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_noche_serena">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Noche%20Serena" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 3 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/rollon-renacer.jpg" alt="Roll-on Renacer" loading="lazy" />
+            <span class="product-badge">Corazón</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Renacer" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Renacer</h3>
+            <p class="product-intention">Alegría · Chakra Corazón</p>
+            <p class="product-desc">Alegría, amor propio, bienestar emocional y vínculos sanos. Un abrazo aromático para el corazón.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_renacer">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Renacer" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 4 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/rollons-grupo.jpg" alt="Colección de Roll-ons" loading="lazy" />
+            <span class="product-badge">Colección</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20quiero%20conocer%20la%20colección%20completa%20de%20roll-ons" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Colección de Roll-ons</h3>
+            <p class="product-intention">Todas las energías</p>
+            <p class="product-desc">La familia completa de roll-ons con intención. Elegí el color y la energía que necesitás en cada momento.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="coleccion_roll_ons">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20quiero%20conocer%20la%20colección%20completa%20de%20roll-ons" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 5 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/agua-rosas.jpg" alt="Agua de Rosas" loading="lazy" />
+            <span class="product-badge">Floral</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Agua%20de%20Rosas" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Agua de Rosas</h3>
+            <p class="product-intention">Suavidad · Amor</p>
+            <p class="product-desc">Spray facial y corporal de rosas. Refresca, hidrata y eleva la vibración del corazón. Ideal para el ritual diario.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="agua_rosas">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Agua%20de%20Rosas" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 6 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/respira-kit.jpg" alt="Respira Bruma y Ungüento" loading="lazy" />
+            <span class="product-badge">Respiración</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20kit%20Respira" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Respira — Bruma & Ungüento</h3>
+            <p class="product-intention">Alivio · Vías respiratorias</p>
+            <p class="product-desc">Bruma ambiental y ungüento herbal con eucalipto, menta, romero y lavanda. Ideal para resfríos, congestión y alivio natural.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="respira_bruma_unguento">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20kit%20Respira" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 7 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/sprays-ambientales.jpg" alt="Sprays Ambientales y Textiles" loading="lazy" />
+            <span class="product-badge">Ambiente</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesan%20los%20Sprays%20Ambientales" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Sprays Ambientales y Textiles</h3>
+            <p class="product-intention">Sándalo & Jazmín · Tilo & Lavanda · Vainilla & Mandarina</p>
+            <p class="product-desc">Tres fragancias que transforman tu espacio: armonía y calidez, relajación, o energía y dulzura.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="sprays_ambientales">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesan%20los%20Sprays%20Ambientales" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 8 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/kit-papa-deportista.jpg" alt="Kit Papá Deportista" loading="lazy" />
+            <span class="product-badge">Regalo</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Kit%20Papá%20Deportista" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kit Papá Deportista</h3>
+            <p class="product-intention">Movimiento · Recuperación · Bienestar</p>
+            <p class="product-desc">Spray corporal de Romero, Palta y Alcanfor + Ungüento de Romero y Tomillo. Ideal para después del deporte.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="kit_papa_deportista">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Kit%20Papá%20Deportista" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 9 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/unguento-romero.jpg" alt="Ungüento de Romero" loading="lazy" />
+            <span class="product-badge">Ungüento</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Ungüento%20de%20Romero" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Ungüento de Romero</h3>
+            <p class="product-intention">Relajación muscular</p>
+            <p class="product-desc">Fórmula artesanal de romero para acompañar la relajación muscular y el bienestar del cuerpo después del movimiento.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="unguento_romero">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Ungüento%20de%20Romero" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 10 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/amatista.jpg" alt="Colgante de Amatista" loading="lazy" />
+            <span class="product-badge">Cristal</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Colgante%20de%20Amatista" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Colgante de Amatista</h3>
+            <p class="product-intention">Protección espiritual · Claridad mental</p>
+            <p class="product-desc">Corazón de amatista. Aporta protección espiritual, sabiduría y claridad mental en la toma de decisiones y el desarrollo personal.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="colgante_amatista">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Colgante%20de%20Amatista" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 11 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/agua-rosas-unguento.jpg" alt="Agua de Rosas + Ungüento" loading="lazy" />
+            <span class="product-badge">Dúo</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20dúo%20Agua%20de%20Rosas%20y%20Ungüento" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Agua de Rosas + Ungüento</h3>
+            <p class="product-intention">Suavidad · Cuidado</p>
+            <p class="product-desc">Combinación perfecta para el ritual de belleza y bienestar. Hidratación floral y cuidado herbal en un solo dúo.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="agua_rosas_unguento">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20dúo%20Agua%20de%20Rosas%20y%20Ungüento" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 12 -->
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img decoding="async" src="assets/productos/difusor-buda.jpg" alt="Difusor Buda" loading="lazy" />
+            <span class="product-badge">Ambiente</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Difusor%20Buda" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Difusor Buda</h3>
+            <p class="product-intention">Paz · Serenidad · Espacio sagrado</p>
+            <p class="product-desc">Difusor decorativo que transforma cualquier ambiente en un espacio de calma y presencia. Ideal para el altar o el living.</p>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="difusor_buda">0.00</span>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Difusor%20Buda" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="section beneficios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Lo que sentís</span>
+        <h2 class="section-title">Beneficios con Intención</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-spa"></i></div>
+          <h3>Bienestar Emocional</h3>
+          <p>Aromas que acompañan y regulan estados de ánimo, reducen la ansiedad y favorecen la calma interior.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-yin-yang"></i></div>
+          <h3>Equilibrio Energético</h3>
+          <p>Fórmulas canalizadas para armonizar los centros energéticos y devolver fluidez al cuerpo sutil.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Armonía Natural</h3>
+          <p>Ingredientes 100% naturales, respetuosos con el cuerpo y con el planeta.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+          <h3>Intención en cada Aroma</h3>
+          <p>Cada blend nace de una canalización con propósito claro. Una herramienta consciente de transformación.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-moon"></i></div>
+          <h3>Conecta con tu Esencia</h3>
+          <p>Más allá del olor, es un recordatorio de quién sos. Un ancla hacia tu centro auténtico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITUALES -->
+  <section id="rituales" class="section rituales">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Cómo usarlos</span>
+        <h2 class="section-title">Rituales de Aromaterapia</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="rituales-grid">
+        <div class="ritual-card reveal">
+          <div class="ritual-number">01</div>
+          <h3>Roll-on Diario</h3>
+          <p>Aplicalo en muñecas, sienes o detrás de las orejas. Respirá profundamente tres veces y sentí cómo el aroma te envuelve.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-number">02</div>
+          <h3>Meditación & Intención</h3>
+          <p>Antes de meditar, ungete el punto entre las cejas o el corazón. Declará tu intención en voz baja.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-number">03</div>
+          <h3>Ambiente Sagrado</h3>
+          <p>Usá las brumas y sprays ambientales para crear un espacio donde el aroma sostenga la energía que deseás cultivar.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-number">04</div>
+          <h3>Ritual Nocturno</h3>
+          <p>Usá Noche Serena en las sienes o en la almohada. Soltá el día y entregate al descanso profundo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARMONIZACIÓN -->
+  <section id="armonizacion" class="section armonizacion">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Una experiencia para volver a tu centro</span>
+        <h2 class="section-title">Armonización</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Un espacio de acompañamiento pensado para equilibrar, limpiar y renovar tu energía desde una mirada consciente y personalizada.</p>
+      </div>
+
+      <div class="armonizacion-grid">
+        <div class="armonizacion-copy reveal">
+          <p class="lead">La <strong>armonización</strong> es una experiencia de bienestar que combina aromas, intención y técnicas energéticas para acompañarte a recuperar equilibrio y conexión con vos mismo.</p>
+          <p>Durante el encuentro se observa cómo te encontrás en ese momento y se define una intención de trabajo. A partir de allí, se utilizan aromas naturales y recursos energéticos seleccionados para crear un espacio de calma, renovación y bienestar.</p>
+          <div class="armonizacion-points">
+            <div class="armonizacion-point"><span>✦</span><div><strong>Equilibrio emocional</strong><small>Acompañamos momentos de tensión, cansancio o sobrecarga emocional.</small></div></div>
+            <div class="armonizacion-point"><span>✧</span><div><strong>Limpieza y renovación</strong><small>Un ritual consciente para soltar lo que ya no necesitás y abrir espacio a lo nuevo.</small></div></div>
+            <div class="armonizacion-point"><span>❈</span><div><strong>Experiencia personalizada</strong><small>Cada armonización se adapta a tu momento, intención y necesidades.</small></div></div>
+          </div>
+          <p class="armonizacion-note"><em>Cuando encontrás tu centro, todo alrededor comienza a sentirse diferente.</em></p>
+          <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%2C%20quiero%20consultar%20por%20una%20armonización" target="_blank" rel="noopener" class="btn btn-gold btn-large"><i class="fab fa-whatsapp"></i> Consultar por Armonización</a>
+        </div>
+
+        <div class="armonizacion-visual reveal delay-1">
+          <div class="armonizacion-image-frame">
+            <img decoding="async" src="assets/armonizacion.webp" alt="Armonización con aromas naturales, aceites esenciales y elementos de bienestar" loading="lazy" />
+            <div class="armonizacion-image-caption"><span>ARMONIZACIÓN</span><small>Equilibra · Limpia · Renueva</small></div>
+          </div>
+          <div class="armonizacion-quote">Tu energía también se puede aromatizar.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Estamos cerca</span>
+        <h2 class="section-title">Contacto & Accesos</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Escribinos, consultá o seguinos. Todo el amor de Mandrágora está a un mensaje de distancia.</p>
+      </div>
+      <div class="contact-cards">
+        <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%20Aromaterapia%2C%20quiero%20saber%20más" target="_blank" rel="noopener" class="contact-card wa-card reveal">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3>Acceso a WhatsApp</h3>
+          <p class="contact-number">376 457 2400</p>
+          <span class="contact-cta">Escribir ahora →</span>
+        </a>
+        <a href="https://www.instagram.com/mandragora.aromass" target="_blank" rel="noopener" class="contact-card ig-card reveal">
+          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+          <h3>Acceso a Instagram</h3>
+          <p class="contact-handle">@mandragora.aromass</p>
+          <span class="contact-cta">Ver el feed →</span>
+        </a>
+      </div>
+      <div class="contact-extra reveal">
+        <p>También podés enviarnos tu consulta directa desde aquí:</p>
+        <a href="https://wa.me/3764572400?text=Hola%2C%20vi%20la%20web%20de%20Mandrágora%20y%20quiero%20hacer%20una%20consulta" class="btn btn-gold btn-large" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Abrir chat de WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <img decoding="async" src="assets/logo-mandragora.jpg" alt="Mandrágora" class="footer-logo" />
+        <div>
+          <span class="footer-name">Mandrágora Aromaterapia</span>
+          <p class="footer-tagline">Aromas con sentido</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://wa.me/3764572400" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/mandragora.aromass" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="footer-copy">© 2026 Mandrágora Aromaterapia · Hecho con ✨ e intención</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%2C%20vengo%20desde%20la%20web" class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Consultar por WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

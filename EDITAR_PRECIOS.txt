@@ -1,0 +1,25 @@
+MANDRÁGORA — GUÍA RÁPIDA PARA EDITAR PRECIOS
+
+1. Abrí index.html con cualquier editor de texto (VS Code, Notepad++, etc.).
+2. Cerca del comienzo del archivo vas a encontrar:
+   EDITOR DE PRECIOS — MODIFICAR SOLO ESTE BLOQUE
+3. Cambiá solamente los valores de MANDRAGORA_PRECIOS.
+
+Ejemplo:
+  rollon_talisman: "12500",
+  rollon_noche_serena: "9800",
+
+4. Guardá index.html.
+5. Abrí index.html en el navegador para comprobar los cambios.
+
+IMPORTANTE:
+- No borres las claves (los nombres antes de los dos puntos).
+- No hace falta modificar los precios que aparecen dentro de las tarjetas: el sistema los carga automáticamente.
+- Si querés mostrar decimales, escribilos directamente, por ejemplo: "12500.50".
+- Todos los precios parten en 0.00 para que puedas colocar tus valores reales.
+
+ARCHIVOS PRINCIPALES:
+- index.html   = contenido, productos y precios.
+- styles.css   = diseño y colores.
+- script.js    = funciones y carga automática de precios.
+- assets/      = imágenes.
