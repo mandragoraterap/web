@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a1a12" />
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__revealReady)document.documentElement.classList.add('no-reveal');},5000);</script>
+  <meta name="description" content="Mandrágora Aromaterapia — Aromas con sentido. Productos de aromaterapia con intención." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Mandrágora Aromaterapia | Aromas con sentido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
+  <link rel="preload" as="image" href="assets/fondo-aromaterapia.webp?v=20261003-1208" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css?v=20261003-3100" />
+  <link rel="icon" href="assets/logo-mandragora.webp?v=20261003-1208" type="image/webp" />
+
+  <!-- Precios: editá solo el archivo precios.js (no hace falta tocar este HTML) -->
+  <script src="precios.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <!-- Fondo animado -->
+  <div id="bg-effects">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="noise"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo">
+        <img width="300" height="358" decoding="async" src="assets/logo-mandragora.webp?v=20261003-1208" alt="Mandrágora Aromaterapia" class="logo-img" />
+        <span class="logo-text">Mandrágora</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="#inicio">Inicio</a>
+        <a href="#esencia">Esencia</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#rituales">Rituales</a>
+        <a href="#armonizacion">Armonización</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="btn-wa-header btn-share-header" id="shareBtn" aria-label="Compartir esta página" title="Compartir">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Volver arriba" title="Volver arriba">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 14 12 8 18 14"/><line x1="12" y1="8" x2="12" y2="20"/></svg>
+  </button>
+
+  <div class="share-toast" id="shareToast" role="status" aria-live="polite">Enlace copiado</div>
+
+  <!-- Visor de imagen ampliada (estilo marketplace) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+    <div class="lightbox-stage" id="lightboxStage">
+      <img id="lightboxImg" alt="" draggable="false" />
+    </div>
+    <span class="lightbox-hint" aria-hidden="true">Zoom en imagen</span>
+  </div>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <img width="300" height="358" decoding="async" src="assets/logo-mandragora.webp?v=20261003-1208" alt="Logo" class="mobile-logo" />
+      <nav>
+        <a href="#inicio" class="mobile-link">Inicio</a>
+        <a href="#esencia" class="mobile-link">Nuestra Esencia</a>
+        <a href="#catalogo" class="mobile-link">Catálogo</a>
+        <a href="#beneficios" class="mobile-link">Beneficios</a>
+        <a href="#rituales" class="mobile-link">Rituales</a>
+        <a href="#armonizacion" class="mobile-link">Armonización</a>
+        <a href="#contacto" class="mobile-link">Contacto</a>
+      </nav>
+      <a href="https://wa.me/3764572400" target="_blank" class="btn btn-gold mobile-wa">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap reveal">
+        <img width="300" height="358" decoding="async" src="assets/logo-mandragora.webp?v=20261003-1208" alt="Mandrágora Aromaterapia" class="hero-logo" fetchpriority="high" />
+      </div>
+      <div class="hero-text reveal delay-1">
+        <p class="hero-eyebrow">Aromaterapia con intención</p>
+        <h1 class="hero-title">Mandrágora</h1>
+        <p class="hero-subtitle">Aromaterapia</p>
+        <div class="hero-divider">
+          <span class="line"></span>
+          <span class="diamond">✦</span>
+          <span class="line"></span>
+        </div>
+        <p class="hero-tagline">Aromas con sentido</p>
+        <p class="hero-desc">Productos elaborados con aceites esenciales puros y plantas seleccionadas por su vibración energética.</p>
+        <div class="hero-ctas">
+          <a href="#catalogo" class="btn btn-gold">
+            <span>Descubrir Catálogo</span>
+            <i class="fas fa-arrow-down"></i>
+          </a>
+          <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%2C%20quiero%20conocer%20más%20sobre%20sus%20aromas" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESENCIA -->
+  <section id="esencia" class="section esencia">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">La raíz de todo</span>
+        <h2 class="section-title">Nuestra Esencia</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="esencia-grid">
+        <div class="esencia-text reveal">
+          <p class="lead">
+            En el corazón de la naturaleza antigua, la <strong>mandrágora</strong> ha sido símbolo de magia, sanación y conexión profunda.
+            Nosotros honramos esa herencia creando <em>aromas con intención</em>.
+          </p>
+          <p>
+            Cada fórmula es elaborada con aceites esenciales puros y plantas seleccionadas por su vibración energética.
+            No son solo fragancias: son herramientas sutiles para el bienestar emocional, la limpieza energética y el ritual diario.
+          </p>
+          <p>
+            Trabajamos también con <strong>canalización energética</strong>: cada blend nace de una intención clara,
+            para acompañarte a alinear cuerpo, emoción y espíritu en tu día a día.
+          </p>
+          <p>
+            Desde el roll-on que llevás en el bolsillo hasta la bruma que eleva el ambiente, cada producto de
+            <strong>Mandrágora Aromaterapia</strong> nace con un propósito: ayudarte a conectar con tu esencia.
+          </p>
+          <div class="esencia-stats">
+            <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Natural</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">+</span>
+              <span class="stat-label">Intención</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Rituales</span>
+            </div>
+          </div>
+        </div>
+        <div class="esencia-visual reveal delay-1">
+          <div class="visual-card">
+            <div class="visual-image"><img width="442" height="482" src="assets/secciones/raiz-ancestral.webp?v=20261003-1208" alt="Raíz Ancestral: naturaleza, raíces y aromaterapia" loading="lazy" decoding="async"></div>
+            <div class="visual-icon">🌳</div>
+            <h3>Raíz Ancestral</h3>
+            <p>Inspirados en la mandrágora y la geometría sagrada.</p>
+          </div>
+          <div class="visual-card">
+            <div class="visual-image"><img width="442" height="482" src="assets/secciones/canalizacion.webp?v=20261003-1208" alt="Canalización: aroma, calma e intención" loading="lazy" decoding="async"></div>
+            <div class="visual-icon">🔮</div>
+            <h3>Canalización</h3>
+            <p>Cada aroma canaliza una intención emocional y energética.</p>
+          </div>
+          <div class="visual-card">
+            <div class="visual-image"><img width="442" height="482" src="assets/secciones/glamour-natural.webp?v=20261003-1208" alt="Glamour Natural: belleza y aromas naturales" loading="lazy" decoding="async"></div>
+            <div class="visual-icon">✨</div>
+            <h3>Glamour Natural</h3>
+            <p>Belleza que se siente, se huele y se vive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="section catalogo">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Colección sagrada</span>
+        <h2 class="section-title">Catálogo de Productos</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Aromas con sentido. Cada producto nació con una intención clara.</p>
+      </div>
+
+      <div class="catalog-cover reveal" style="max-width:420px;margin:0 auto 2.5rem;border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.35);">
+        <img width="1000" height="1415" decoding="async" src="assets/productos/catalogo-portada.webp?v=20261003-1208" alt="Catálogo Mandrágora Octubre 2026" style="width:100%;display:block;" loading="lazy" />
+      </div>
+
+      <!-- TIPOS DE PRODUCTOS: marco nuevo entre la portada del catálogo y Spray Auricos -->
+      <div class="tipos-frame reveal" aria-labelledby="tiposTitulo">
+        <div class="tipos-frame-inner">
+          <header class="tipos-head">
+            <span class="tipos-head-line"></span>
+            <h3 id="tiposTitulo" class="tipos-head-title">Productos</h3>
+            <span class="tipos-head-line"></span>
+          </header>
+
+          <ul class="tipos-list">
+            <li class="tipo-card">
+              <span class="tipo-icon" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></span>
+              <div class="tipo-body">
+                <h4 class="tipo-title">Spray Áuricos</h4>
+                <p class="tipo-desc">Diseñados para armonizar, limpiar o fortalecer el aura, que es el campo energético que rodea a nuestro cuerpo. Se elaboran utilizando mezclas de aceites esenciales, hierbas y cristales que tienen propiedades específicas para influir en tu estado emocional, mental o espiritual.</p>
+              </div>
+              <span class="tipo-num" aria-hidden="true">03</span>
+            </li>
+
+            <li class="tipo-card">
+              <span class="tipo-icon" aria-hidden="true"><i class="fas fa-droplet"></i></span>
+              <div class="tipo-body">
+                <h4 class="tipo-title">Roll-on</h4>
+                <p class="tipo-desc">Son mezclas concentradas de aceites esenciales y cristales triturados o macerados que se aplican directamente en la piel. Al aplicarse sobre puntos estratégicos del cuerpo, como muñecas, sienes o cuello, los aceites penetran en la piel y activan respuestas del sistema nervioso.</p>
+              </div>
+              <span class="tipo-num" aria-hidden="true">06</span>
+            </li>
+
+            <li class="tipo-card">
+              <span class="tipo-icon" aria-hidden="true"><i class="fas fa-cloud"></i></span>
+              <div class="tipo-body">
+                <h4 class="tipo-title">Brumas</h4>
+                <p class="tipo-desc">Son soluciones aromáticas ligeras que se presentan en forma de spray y están diseñadas para rociarse sobre el cuerpo, en el entorno o incluso sobre almohadas y tejidos. Están elaboradas con mezclas de aceites esenciales o con extractos naturales que ofrecen propiedades relajantes, energizantes o terapéuticas.</p>
+              </div>
+              <span class="tipo-num" aria-hidden="true">08</span>
+            </li>
+
+            <li class="tipo-card">
+              <span class="tipo-icon" aria-hidden="true"><i class="fas fa-house-chimney-window"></i></span>
+              <div class="tipo-body">
+                <h4 class="tipo-title">Spray Ambientes y Difusores</h4>
+                <p class="tipo-desc">Están diseñados para aromatizar y energizar espacios. Están formulados con aceites esenciales que no solo brindan fragancia, sino también propiedades terapéuticas y energéticas. Pueden equilibrar el ambiente, generar calma, promover concentración o incluso limpiar energías negativas.</p>
+              </div>
+              <span class="tipo-num" aria-hidden="true">09</span>
+            </li>
+
+            <li class="tipo-card tipo-card--wide">
+              <span class="tipo-icon" aria-hidden="true"><i class="fas fa-leaf"></i></span>
+              <div class="tipo-body">
+                <h4 class="tipo-title">Sahumos</h4>
+                <p class="tipo-desc">El sahumo es una práctica ancestral que utiliza hierbas secas, resinas y maderas aromáticas, como el palo santo, para generar humo que purifica y eleva la energía de un espacio, una persona o un objeto. Estas mezclas de hierbas están pensadas para limpiar, armonizar y energizar.</p>
+              </div>
+              <span class="tipo-num" aria-hidden="true">12</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SPRAY AURICOS: pieza destacada entre la portada del catálogo y Roll-on Canal -->
+      <div class="spray-feature reveal" data-lightbox role="button" tabindex="0" aria-label="Spray Áuricos Mandrágora: tocar para ampliar la imagen">
+        <div class="spray-feature-inner">
+          <img width="1054" height="1492" decoding="async" src="assets/productos/spray-auricos.webp?v=20261003-1800" alt="Spray Auricos Mandrágora: Confianza, Alma Serena, Vínculo, Purifica, Mistic y + Amor" loading="lazy" />
+          <span class="zoom-cue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+            <b>Ampliar imagen</b>
+          </span>
+        </div>
+      </div>
+
+      <!-- SPRAYS ÁURICOS Y BRUMAS: entre Spray Auricos y Roll-on Canal -->
+      <div class="products-grid products-grid--sprays" id="spraysGrid">
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-alma-serena.webp?v=20261003-1208" alt="Spray Áurico Alma Serena Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Calma</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Alma%20Serena" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Spray Áurico Alma Serena</h3>
+            <p class="product-intention">Tranquilidad y equilibrio · 125 cc</p>
+            <p class="product-desc">Para equilibrar estados emocionales cambiantes. Rociá al comenzar el día o antes de dormir, o en tus manos, e inhalá profundamente unos segundos.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_alma_serena">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Alma%20Serena" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-confianza.webp?v=20261003-1208" alt="Spray Áurico Confianza Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Seguridad</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Confianza" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Spray Áurico Confianza</h3>
+            <p class="product-intention">Seguridad y autoestima · 125 cc</p>
+            <p class="product-desc">Aporta seguridad, autoestima y empoderamiento. Aplicá antes de reuniones importantes o desafíos, o cuando sentís dudas sobre tu poder y tu valor.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_confianza">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Confianza" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-purifica.webp?v=20261003-1208" alt="Spray Áurico Purifica Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Protección</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Purifica" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Spray Áurico Purifica</h3>
+            <p class="product-intention">Limpieza y protección · 125 cc</p>
+            <p class="product-desc">Úsalo en ambientes cargados o después de visitas, al llegar a casa, antes de dormir o al comenzar una práctica sagrada. Limpia y protege tu aura.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_purifica">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Purifica" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-mistic.webp?v=20261003-1208" alt="Spray Áurico Mistic Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Espiritual</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Mistic" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Spray Áurico Mistic</h3>
+            <p class="product-intention">Conexión espiritual · 125 cc</p>
+            <p class="product-desc">Utilizalo antes de prácticas de yoga o rituales de introspección, y cuando necesites reconectar con tu ser espiritual.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_mistic">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20Mistic" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-amor.webp?v=20261003-1208" alt="Spray Áurico + Amor Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Amor</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20%2B%20Amor" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Spray Áurico + Amor</h3>
+            <p class="product-intention">Apertura emocional · 125 cc</p>
+            <p class="product-desc">Trabaja el amor propio, la ternura y la apertura emocional. Úsalo durante prácticas de autocuidado o al escribir afirmaciones positivas.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_amor">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20%2B%20Amor" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-vinculo.webp?v=20261003-1208" alt="Spray Áurico Vínculo Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Conexión</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20V%C3%ADnculo" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Spray Áurico Vínculo</h3>
+            <p class="product-intention">Conexión, encuentro y comunicación · 125 cc</p>
+            <p class="product-desc">Para activar la energía creativa y potenciar la atracción. Úsalo antes de encuentros afectivos o actividades en grupo, para desbloquear emociones retenidas y crear lazos sanos.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_vinculo">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20%C3%81urico%20V%C3%ADnculo" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ROLL-ON: marco nuevo entre Spray Áurico Vínculo y Roll-on Canal -->
+      <div class="rollon-feature reveal" aria-label="Roll-on: Canal, Talismán, Power, Noche Serena, Renacer y Calma Clara">
+        <div class="rollon-feature-inner">
+          <span class="zoom-wrap">
+            <picture>
+            <img data-lightbox role="button" tabindex="0" decoding="async" src="assets/productos/rollon-etiquetas.webp?v=20261003-1208" width="1000" height="956" alt="Roll-on Mandrágora: Canal (conexión espiritual), Talismán (protección), Power (vitalidad), Noche Serena (calma y descanso), Renacer (bienestar emocional) y Calma Clara (migrañas)" loading="lazy" />
+          </picture>
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+          <div class="rollon-feature-caption">
+            <h3 class="rollon-feature-title">Colección de Roll-ons</h3>
+            <p class="rollon-feature-names">Canal · Talismán · Power · Noche Serena · Renacer · Calma Clara</p>
+            <p class="rollon-feature-desc">Toda la línea de roll-ons con intención. Consultá por la colección completa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="960" decoding="async" src="assets/productos/rollon-canal.webp?v=20261003-1208" alt="Roll-on Canal" loading="lazy" />
+            <span class="product-badge">Espiritual</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Canal" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Canal</h3>
+            <p class="product-intention">Conexión espiritual</p>
+            <p class="product-desc">Favorece la conexión espiritual y la apertura sutil. Ideal para meditación, rituales y momentos de introspección.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_canal">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Canal" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="960" decoding="async" src="assets/productos/rollon-talisman.webp?v=20261003-1208" alt="Roll-on Talismán" loading="lazy" />
+            <span class="product-badge">Protección</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Talism%C3%A1n" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Talismán</h3>
+            <p class="product-intention">Protección</p>
+            <p class="product-desc">Protección energética, limpieza y estabilidad. Ideal para anclarte y sentirte seguro.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_talisman">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Talism%C3%A1n" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="960" decoding="async" src="assets/productos/rollon-power.webp?v=20261003-1208" alt="Roll-on Power" loading="lazy" />
+            <span class="product-badge">Vitalidad</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Power" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Power</h3>
+            <p class="product-intention">Vitalidad</p>
+            <p class="product-desc">Energía, vitalidad y fuerza. Ideal para activar el cuerpo y el ánimo cuando necesitás impulso.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_power">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Power" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="960" decoding="async" src="assets/productos/rollon-noche-serena.webp?v=20261003-1208" alt="Roll-on Noche Serena" loading="lazy" />
+            <span class="product-badge">Descanso</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Noche%20Serena" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Noche Serena</h3>
+            <p class="product-intention">Calma y descanso</p>
+            <p class="product-desc">Relajación y buen descanso. Perfecto para el ritual nocturno y aliviar la ansiedad.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_noche_serena">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Noche%20Serena" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="960" decoding="async" src="assets/productos/rollon-renacer.webp?v=20261003-1208" alt="Roll-on Renacer" loading="lazy" />
+            <span class="product-badge">Corazón</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Renacer" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Renacer</h3>
+            <p class="product-intention">Bienestar emocional</p>
+            <p class="product-desc">Alegría, amor propio y bienestar emocional. Un abrazo aromático para el corazón.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_renacer">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Renacer" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="960" decoding="async" src="assets/productos/rollon-calma-clara.webp?v=20261003-1208" alt="Roll-on Calma Clara" loading="lazy" />
+            <span class="product-badge">Alivio</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Calma%20Clara" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Roll-on Calma Clara</h3>
+            <p class="product-intention">Migrañas</p>
+            <p class="product-desc">Alivio para migrañas y tensión. Aporta armonía, equilibrio y claridad mental.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="rollon_calma_clara">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Roll-on%20Calma%20Clara" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- BRUMAS: marco destacado debajo de Roll-on Calma Clara -->
+      <div class="brumas-feature reveal" aria-label="Brumas: Agua de Ruda, Pomelo y Pimienta, Agua Florida">
+        <div class="brumas-feature-inner">
+          <span class="zoom-wrap">
+            <img data-lightbox role="button" tabindex="0" width="1000" height="1333" decoding="async" src="assets/productos/brumas-coleccion.webp?v=20261003-1730" alt="Brumas Mandrágora: Agua Florida, Agua de Ruda y Pomelo y Pimienta" loading="lazy" />
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+          <div class="brumas-feature-caption">
+            <h3 class="brumas-feature-title">Colección de Brumas</h3>
+            <p class="brumas-feature-names">Agua de Ruda · Pomelo y Pimienta · Agua Florida</p>
+            <p class="brumas-feature-desc">Brumas hidroalcohólicas con intención. Soluciones aromáticas ligeras para rociar sobre el cuerpo, el entorno o tejidos. Limpieza, protección, energía y abundancia.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="brumasGrid">
+
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="918" decoding="async" src="assets/productos/bruma-agua-de-ruda.webp?v=20261003-1208" alt="Bruma Agua de Ruda" loading="lazy" />
+            <span class="product-badge">Protección</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20la%20Bruma%20Agua%20de%20Ruda" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bruma Agua de Ruda</h3>
+            <p class="product-intention">Protección · 125 cc</p>
+            <p class="product-desc">Bruma hidroalcohólica de ruda con turmalina. Protección y resguardo para ti y tu espacio.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="brumas_agua_de_ruda">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20la%20Bruma%20Agua%20de%20Ruda" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="918" decoding="async" src="assets/productos/bruma-pomelo-y-pimienta.webp?v=20261003-1208" alt="Bruma Pomelo y Pimienta" loading="lazy" />
+            <span class="product-badge">Energía</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20la%20Bruma%20Pomelo%20y%20Pimienta" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bruma Pomelo y Pimienta</h3>
+            <p class="product-intention">Energía · 125 cc</p>
+            <p class="product-desc">Bruma hidroalcohólica de pomelo y pimienta. Aporta energía, armonía y bienestar.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="brumas_pomelo_pimienta">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20la%20Bruma%20Pomelo%20y%20Pimienta" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="918" decoding="async" src="assets/productos/bruma-agua-florida.webp?v=20261003-1208" alt="Bruma Agua Florida" loading="lazy" />
+            <span class="product-badge">Limpieza</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20la%20Bruma%20Agua%20Florida" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bruma Agua Florida</h3>
+            <p class="product-intention">Limpieza · Armonía · Abundancia</p>
+            <p class="product-desc">Bruma hidroalcohólica de agua florida. Limpieza, armonía y abundancia en formato spray.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="brumas_agua_florida">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20la%20Bruma%20Agua%20Florida" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- RESPIRA: imagen destacada arriba de Bruma Respira (la grilla se corta aquí y continúa debajo) -->
+      <div class="brumas-feature brumas-feature--ambientes brumas-feature--promo reveal" aria-label="Respira: bruma ambiental y ungüento herbal, dos formas de respirar mejor">
+        <div class="brumas-feature-inner">
+          <span class="zoom-wrap">
+            <img data-lightbox role="button" tabindex="0" width="1000" height="1415" decoding="async" src="assets/productos/respira-dos-formas.webp?v=20261003-1208" alt="Dos formas de respirar mejor: Respira bruma ambiental (125 cc) y Respira ungüento herbal, con eucalipto, menta, romero y lavanda" loading="lazy" />
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="products-grid" id="brumasGrid2">
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-respira.webp?v=20261003-1208" alt="Bruma Respira Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Invierno</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Bruma%20Respira" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bruma Respira</h3>
+            <p class="product-intention">Purificación de invierno · 125 cc</p>
+            <p class="product-desc">Bruma para renovar el aire y el ánimo en los días fríos. Rociala en tu hogar o espacio de trabajo para purificar el ambiente y volver a respirar profundo.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_respira">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Bruma%20Respira" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/spray-venus.webp?v=20261003-1208" alt="Bruma Venus Mandrágora 125 cc" loading="lazy" />
+            <span class="product-badge">Pasión</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Bruma%20Venus" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bruma Venus</h3>
+            <p class="product-intention">Calidez y pasión · 125 cc</p>
+            <p class="product-desc">Bruma para encender la calidez, la sensualidad y la pasión. Ideal para armar un ambiente íntimo, romántico y lleno de magnetismo.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_venus">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Bruma%20Venus" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- UNGÜENTOS NATURALES: imagen destacada debajo de Bruma Venus, con precio abajo -->
+      <div class="brumas-feature brumas-feature--ambientes brumas-feature--promo reveal" aria-label="Ungüentos naturales Mandrágora: Manzanilla y Caléndula, Tomillo y Romero, Lavanda y Geranio">
+        <div class="brumas-feature-inner">
+          <span class="zoom-wrap">
+            <img data-lightbox role="button" tabindex="0" width="1000" height="1416" decoding="async" src="assets/productos/unguentos-naturales.webp?v=20261003-1208" alt="Ungüentos naturales Mandrágora: Manzanilla y Caléndula, Tomillo y Romero, Lavanda y Geranio" loading="lazy" />
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+          <div class="brumas-feature-caption">
+            <div class="product-footer unguento-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="unguentos_naturales">12.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesan%20los%20Ung%C3%BCentos%20Naturales" target="_blank" class="btn-product" aria-label="Consultar ungüentos por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPRAY AMBIENTAL Y TEXTIL: imagen promocional arriba de Spray Ambientes y Difusores -->
+      <div class="brumas-feature brumas-feature--ambientes brumas-feature--promo reveal" aria-label="Spray ambiental y textil Mandrágora 250 ml">
+        <div class="brumas-feature-inner">
+          <span class="zoom-wrap">
+            <img data-lightbox role="button" tabindex="0" width="1000" height="1415" decoding="async" src="assets/productos/spray-ambiental-textil-promo.webp?v=20261003-1208" alt="Spray ambiental y textil Mandrágora 250 ml, $14.000, 20% off: OM, Energía limpia, Balance y Solcito" loading="lazy" />
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <!-- SPRAY AMBIENTES Y DIFUSORES: marco destacado debajo de Bruma Agua Florida -->
+      <div class="brumas-feature brumas-feature--ambientes reveal" aria-label="Spray Ambientes y Difusores: Sándalo y Jazmín, Tilo y Lavanda, Vainilla y Mandarina">
+        <div class="brumas-feature-inner">
+          <span class="zoom-wrap">
+            <img data-lightbox role="button" tabindex="0" width="1000" height="1000" decoding="async" src="assets/productos/sprays-ambientales-textiles.webp?v=20261003-1208" alt="Sprays ambientales y textiles Mandrágora: Sándalo y Jazmín, Tilo y Lavanda, Vainilla y Mandarina" loading="lazy" />
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+          <div class="brumas-feature-caption">
+            <h3 class="brumas-feature-title">Spray Ambientes y Difusores</h3>
+            <p class="brumas-feature-names">Sándalo y Jazmín · Tilo y Lavanda · Vainilla y Mandarina</p>
+            <p class="brumas-feature-desc">Sprays ambientales y textiles con aromas naturales que transforman tu espacio. Sándalo y Jazmín: armonía y calidez. Tilo y Lavanda: relajación y bienestar. Vainilla y Mandarina: energía y dulzura. Ideales para textiles y para llevar bienestar a cada rincón.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="ambientesGrid">
+
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="1001" decoding="async" src="assets/productos/spray-sandalo-jazmin.webp?v=20261003-1208" alt="Spray Ambientes Sándalo y Jazmín" loading="lazy" />
+            <span class="product-badge">Armonía</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20Ambientes%20S%C3%A1ndalo%20y%20Jazm%C3%ADn" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Sándalo y Jazmín</h3>
+            <p class="product-intention">Armonía · Calidez</p>
+            <p class="product-desc">Spray ambiental y textil de sándalo y jazmín. Aporta armonía y calidez a tu espacio, creando un ambiente sereno y acogedor.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_sandalo_jazmin">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20Ambientes%20S%C3%A1ndalo%20y%20Jazm%C3%ADn" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="1001" decoding="async" src="assets/productos/spray-tilo-lavanda.webp?v=20261003-1208" alt="Spray Ambientes Tilo y Lavanda" loading="lazy" />
+            <span class="product-badge">Relajación</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20Ambientes%20Tilo%20y%20Lavanda" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tilo y Lavanda</h3>
+            <p class="product-intention">Relajación · Bienestar</p>
+            <p class="product-desc">Spray ambiental y textil de tilo y lavanda. Favorece la relajación y el bienestar, ideal para crear un ambiente de calma y descanso.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_tilo_lavanda">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20Ambientes%20Tilo%20y%20Lavanda" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="1001" decoding="async" src="assets/productos/spray-vainilla-mandarina.webp?v=20261003-1208" alt="Spray Ambientes Vainilla y Mandarina" loading="lazy" />
+            <span class="product-badge">Energía</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20Ambientes%20Vainilla%20y%20Mandarina" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Vainilla y Mandarina</h3>
+            <p class="product-intention">Energía · Dulzura</p>
+            <p class="product-desc">Spray ambiental y textil de vainilla y mandarina. Aporta energía y dulzura, revitalizando tu espacio con un aroma alegre y reconfortante.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="spray_vainilla_mandarina">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Spray%20Ambientes%20Vainilla%20y%20Mandarina" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- DIFUSORES PARA VEHÍCULOS: marco destacado debajo de Spray Ambientes -->
+      <div class="brumas-feature brumas-feature--ambientes reveal" aria-label="Difusores para vehículos">
+        <div class="brumas-feature-inner">
+          <span class="zoom-wrap">
+            <img data-lightbox role="button" tabindex="0" width="1000" height="1188" decoding="async" src="assets/productos/difusores-vehiculos.webp?v=20261003-1208" alt="Difusores para vehículos Mandrágora: frascos de vidrio con tapa de madera y cordón" loading="lazy" />
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+          <div class="brumas-feature-caption">
+            <h3 class="brumas-feature-title">Difusores para vehículos</h3>
+            <p class="brumas-feature-names">Vidrio y madera · Colgantes</p>
+            <p class="brumas-feature-desc">Pequeños difusores colgantes de vidrio con tapa de madera y cordón. Cuelgan del espejo retrovisor para perfumar tu auto de forma suave y continua, y también sirven para placares, cajones o cualquier rincón. Un toque de calma y armonía en cada viaje.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIFUSORES PARA VEHÍCULOS -->
+      <div class="products-grid" id="difusoresGrid">
+
+        <article class="product-card reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="640" decoding="async" src="assets/productos/difusores-vehiculos-foto.webp?v=20261003-1208" alt="Difusores para vehículos Mandrágora" loading="lazy" />
+            <span class="product-badge">Viaje</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Difusor%20para%20veh%C3%ADculos" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Difusores para vehículos</h3>
+            <p class="product-intention">Vidrio y madera · Colgantes</p>
+            <p class="product-desc">Difusores colgantes de vidrio con tapa de madera natural. Ideales para el espejo del auto. Aromas con intención que aportan calma y armonía en cada viaje.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="difusor_vehiculos">14.000</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Difusor%20para%20veh%C3%ADculos" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- SAHUMERIOS -->
+      <div class="brumas-feature brumas-feature--ambientes reveal" aria-label="Sahumerios Mandrágora">
+        <div class="brumas-feature-inner">
+          <span class="zoom-wrap">
+            <img data-lightbox role="button" tabindex="0" width="1000" height="1500" decoding="async" src="assets/productos/sahumerios-coleccion.webp?v=20261003-1208" alt="Sahumerios Mandrágora: Rosas, Ratnamala, Clavo de olor, Romero y palo santo, Sándalo indú, Vainilla" loading="lazy" />
+            <span class="zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/><line x1="10.5" y1="7.8" x2="10.5" y2="13.2"/><line x1="7.8" y1="10.5" x2="13.2" y2="10.5"/></svg>
+              <b>Ampliar imagen</b>
+            </span>
+          </span>
+          <div class="brumas-feature-caption">
+            <h3 class="brumas-feature-title">Sahumerios</h3>
+            <p class="brumas-feature-names">Rosas · Ratnamala · Clavo de olor · Romero y palo santo · Sándalo indú · Vainilla</p>
+            <p class="brumas-feature-desc">Sahumerios de hierbas y maderas aromáticas. Aromas que acompañan tu energía: Rosas (Amor), Ratnamala (Armonía), Clavo de olor (Protección), Romero y palo santo (Limpieza), Sándalo indú (Conexión) y Vainilla (Bienestar). Ideales para rituales de purificación y armonización.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="sahumeriosGrid">
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/sahumerio-rosas.webp?v=20261003-3000" alt="Sahumerio Rosas Mandrágora" loading="lazy" />
+            <span class="product-badge">Amor</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Rosas" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Rosas</h3>
+            <p class="product-intention">Amor</p>
+            <p class="product-desc">Sahumerio de rosas. Aroma que acompaña y potencia la energía del amor, la apertura del corazón y los vínculos afectivos.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="sahumerio_rosas">2.800</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Rosas" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/sahumerio-ratnamala.webp?v=20261003-3000" alt="Sahumerio Ratnamala Mandrágora" loading="lazy" />
+            <span class="product-badge">Armonía</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Ratnamala" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Ratnamala</h3>
+            <p class="product-intention">Armonía</p>
+            <p class="product-desc">Sahumerio de ratnamala. Aroma que favorece la armonía, el equilibrio y la serenidad en tu espacio y en tu energía.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="sahumerio_ratnamala">2.800</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Ratnamala" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/sahumerio-clavo-de-olor.webp?v=20261003-3000" alt="Sahumerio Clavo de olor Mandrágora" loading="lazy" />
+            <span class="product-badge">Protección</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Clavo%20de%20olor" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Clavo de olor</h3>
+            <p class="product-intention">Protección</p>
+            <p class="product-desc">Sahumerio de clavo de olor. Aroma de protección y resguardo que limpia y fortalece el campo energético.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="sahumerio_clavo_de_olor">2.800</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Clavo%20de%20olor" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/sahumerio-romero-palo-santo.webp?v=20261003-3000" alt="Sahumerio Romero y palo santo Mandrágora" loading="lazy" />
+            <span class="product-badge">Limpieza</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Romero%20y%20palo%20santo" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Romero y palo santo</h3>
+            <p class="product-intention">Limpieza</p>
+            <p class="product-desc">Sahumerio de romero y palo santo. Aroma de limpieza profunda que purifica espacios y energías, ideal para rituales de renovación.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="sahumerio_romero_palo_santo">2.800</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Romero%20y%20palo%20santo" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/sahumerio-sandalo-indu.webp?v=20261003-3000" alt="Sahumerio Sándalo indú Mandrágora" loading="lazy" />
+            <span class="product-badge">Conexión</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20S%C3%A1ndalo%20ind%C3%BA" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Sándalo indú</h3>
+            <p class="product-intention">Conexión</p>
+            <p class="product-desc">Sahumerio de sándalo indú. Aroma que favorece la conexión espiritual, la meditación y el anclaje con lo sagrado.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="sahumerio_sandalo_indu">2.800</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20S%C3%A1ndalo%20ind%C3%BA" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--spray reveal">
+          <div class="product-image-wrap">
+            <img width="640" height="853" decoding="async" src="assets/productos/sahumerio-vainilla.webp?v=20261003-3000" alt="Sahumerio Vainilla Mandrágora" loading="lazy" />
+            <span class="product-badge">Bienestar</span>
+            <div class="product-overlay">
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Vainilla" target="_blank" class="overlay-btn">
+                <i class="fab fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Vainilla</h3>
+            <p class="product-intention">Bienestar</p>
+            <p class="product-desc">Sahumerio de vainilla. Aroma dulce y reconfortante que aporta bienestar, calidez y una sensación de hogar y cuidado.</p>
+            <div class="product-footer">
+              <div class="price-group">
+                <div class="price-box">
+                <span class="price-currency">$</span>
+                <span class="product-price" data-price-key="sahumerio_vainilla">2.800</span>
+              </div>
+                <button type="button" class="btn-cart" aria-label="Agregar al carrito" title="Agregar al carrito">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cart-speed"><line x1="0.8" y1="9" x2="3.6" y2="9"/><line x1="1.6" y1="12" x2="4.4" y2="12"/></g><circle cx="8.5" cy="20.5" r="1.4"/><circle cx="18" cy="20.5" r="1.4"/><path d="M2 3h2.6l2.5 12.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L21 8H5.6"/></svg>
+                  <span class="cart-badge" aria-hidden="true"></span>
+                </button>
+              </div>
+              <a href="https://wa.me/3764572400?text=Hola%2C%20me%20interesa%20el%20Sahumerio%20Vainilla" target="_blank" class="btn-product">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="section beneficios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Lo que sentís</span>
+        <h2 class="section-title">Beneficios con Intención</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-spa"></i></div>
+          <h3>Bienestar Emocional</h3>
+          <p>Aromas que acompañan y regulan estados de ánimo, reducen la ansiedad y favorecen la calma interior.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-yin-yang"></i></div>
+          <h3>Equilibrio Energético</h3>
+          <p>Fórmulas canalizadas para armonizar los centros energéticos y devolver fluidez al cuerpo sutil.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Armonía Natural</h3>
+          <p>Ingredientes 100% naturales, respetuosos con el cuerpo y con el planeta.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+          <h3>Intención en cada Aroma</h3>
+          <p>Cada blend nace de una canalización con propósito claro. Una herramienta consciente de transformación.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><i class="fas fa-moon"></i></div>
+          <h3>Conecta con tu Esencia</h3>
+          <p>Más allá del olor, es un recordatorio de quién sos. Un ancla hacia tu centro auténtico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITUALES -->
+  <section id="rituales" class="section rituales">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Cómo usarlos</span>
+        <h2 class="section-title">Rituales de Aromaterapia</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="rituales-grid">
+        <div class="ritual-card reveal">
+          <div class="ritual-number">01</div>
+          <h3>Roll-on Diario</h3>
+          <p>Aplicalo en muñecas, sienes o detrás de las orejas. Respirá profundamente tres veces y sentí cómo el aroma te envuelve.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-number">02</div>
+          <h3>Meditación & Intención</h3>
+          <p>Antes de meditar, ungete el punto entre las cejas o el corazón. Declará tu intención en voz baja.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-number">03</div>
+          <h3>Ambiente Sagrado</h3>
+          <p>Usá las brumas y sprays ambientales para crear un espacio donde el aroma sostenga la energía que deseás cultivar.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-number">04</div>
+          <h3>Ritual Nocturno</h3>
+          <p>Usá Noche Serena en las sienes o en la almohada. Soltá el día y entregate al descanso profundo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARMONIZACIÓN -->
+  <section id="armonizacion" class="section armonizacion">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Una experiencia para volver a tu centro</span>
+        <h2 class="section-title">Armonización</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Un espacio de acompañamiento pensado para equilibrar, limpiar y renovar tu energía desde una mirada consciente y personalizada.</p>
+      </div>
+
+      <div class="armonizacion-grid">
+        <div class="armonizacion-copy reveal">
+          <p class="lead">La <strong>armonización</strong> es una experiencia de bienestar que combina aromas, intención y técnicas energéticas para acompañarte a recuperar equilibrio y conexión con vos mismo.</p>
+          <p>Durante el encuentro se observa cómo te encontrás en ese momento y se define una intención de trabajo. A partir de allí, se utilizan aromas naturales y recursos energéticos seleccionados para crear un espacio de calma, renovación y bienestar.</p>
+          <div class="armonizacion-points">
+            <div class="armonizacion-point"><span>✦</span><div><strong>Equilibrio emocional</strong><small>Acompañamos momentos de tensión, cansancio o sobrecarga emocional.</small></div></div>
+            <div class="armonizacion-point"><span>✧</span><div><strong>Limpieza y renovación</strong><small>Un ritual consciente para soltar lo que ya no necesitás y abrir espacio a lo nuevo.</small></div></div>
+            <div class="armonizacion-point"><span>❈</span><div><strong>Experiencia personalizada</strong><small>Cada armonización se adapta a tu momento, intención y necesidades.</small></div></div>
+          </div>
+          <p class="armonizacion-note"><em>Cuando encontrás tu centro, todo alrededor comienza a sentirse diferente.</em></p>
+          <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%2C%20quiero%20consultar%20por%20una%20armonización" target="_blank" rel="noopener" class="btn btn-gold btn-large"><i class="fab fa-whatsapp"></i> Consultar por Armonización</a>
+        </div>
+
+        <div class="armonizacion-visual reveal delay-1">
+          <div class="armonizacion-image-frame">
+            <img width="640" height="960" decoding="async" src="assets/armonizacion.webp?v=20261003-1208" alt="Armonización con aromas naturales, aceites esenciales y elementos de bienestar" loading="lazy" />
+            <div class="armonizacion-image-caption"><span>ARMONIZACIÓN</span><small>Equilibra · Limpia · Renueva</small></div>
+          </div>
+          <div class="armonizacion-quote">Tu energía también se puede aromatizar.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Estamos cerca</span>
+        <h2 class="section-title">Contacto & Accesos</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Escribinos, consultá o seguinos. Todo el amor de Mandrágora está a un mensaje de distancia.</p>
+      </div>
+      <div class="contact-cards">
+        <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%20Aromaterapia%2C%20quiero%20saber%20más" target="_blank" rel="noopener" class="contact-card wa-card reveal">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3>Acceso a WhatsApp</h3>
+          <p class="contact-number">376 457 2400</p>
+          <span class="contact-cta">Escribir ahora →</span>
+        </a>
+        <a href="https://www.instagram.com/mandragora.aromass" target="_blank" rel="noopener" class="contact-card ig-card reveal">
+          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+          <h3>Acceso a Instagram</h3>
+          <p class="contact-handle">@mandragora.aromass</p>
+          <span class="contact-cta">Ver el feed →</span>
+        </a>
+      </div>
+      <div class="contact-extra reveal">
+        <p>También podés enviarnos tu consulta directa desde aquí:</p>
+        <a href="https://wa.me/3764572400?text=Hola%2C%20vi%20la%20web%20de%20Mandrágora%20y%20quiero%20hacer%20una%20consulta" class="btn btn-gold btn-large" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Abrir chat de WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <img width="300" height="358" decoding="async" src="assets/logo-mandragora.webp?v=20261003-1208" alt="Mandrágora" class="footer-logo" />
+        <div>
+          <span class="footer-name">Mandrágora Aromaterapia</span>
+          <p class="footer-tagline">Aromas con sentido</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://wa.me/3764572400" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/mandragora.aromass" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="footer-copy">© 2026 Mandrágora Aromaterapia · Hecho con ✨ e intención</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/3764572400?text=Hola%20Mandrágora%2C%20vengo%20desde%20la%20web" class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Consultar por WhatsApp</span>
+  </a>
+
+  <script src="script.js?v=20261003-3100" defer></script>
+</body>
+</html>

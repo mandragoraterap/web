@@ -1,0 +1,55 @@
+MANDRÁGORA — CÓMO EDITAR LOS PRECIOS
+====================================
+
+1. Abrí precios.js
+2. Cambiá solo los números entre comillas
+3. Guardá y recargá index.html
+
+ROLL-ONS ($14.000)
+------------------
+  rollon_canal            → Canal — Conexión espiritual
+  rollon_talisman         → Talismán — Protección
+  rollon_power            → Power — Vitalidad
+  rollon_noche_serena     → Noche Serena — Calma y descanso
+  rollon_renacer          → Renacer — Bienestar emocional
+  rollon_calma_clara      → Calma Clara — Migrañas
+
+SPRAYS ÁURICOS Y BRUMAS (125 cc)
+---------------------------------
+  spray_respira           → Bruma Respira
+  spray_alma_serena       → Spray Áurico Alma Serena
+  spray_confianza         → Spray Áurico Confianza
+  spray_venus             → Bruma Venus
+  spray_purifica          → Spray Áurico Purifica
+  spray_mistic            → Spray Áurico Mistic
+  spray_amor              → Spray Áurico + Amor
+  spray_vinculo           → Spray Áurico Vínculo
+
+OTROS
+-----
+  brumas_agua_de_ruda     → Bruma Agua de Ruda ($12.000)
+  brumas_pomelo_pimienta  → Bruma Pomelo y Pimienta ($12.000)
+  brumas_agua_florida     → Bruma Agua Florida ($12.000)
+
+SPRAY AMBIENTES Y DIFUSORES ($14.000 c/u)
+---------------------------
+  spray_sandalo_jazmin    → Sándalo y Jazmín ($14.000)
+  spray_tilo_lavanda      → Tilo y Lavanda ($14.000)
+  spray_vainilla_mandarina → Vainilla y Mandarina ($14.000)
+
+DIFUSORES PARA VEHÍCULOS
+------------------------
+  difusor_vehiculos       → Difusores para vehículos ($14.000)
+
+SAHUMERIOS ($2.800 c/u)
+----------------------
+  sahumerio_rosas             → Rosas — Amor
+  sahumerio_ratnamala         → Ratnamala — Armonía
+  sahumerio_clavo_de_olor     → Clavo de olor — Protección
+  sahumerio_romero_palo_santo → Romero y palo santo — Limpieza
+  sahumerio_sandalo_indu      → Sándalo indú — Conexión
+  sahumerio_vainilla          → Vainilla — Bienestar
+
+UNGÜENTOS NATURALES ($12.000)
+----------------------------
+  unguentos_naturales     → Manzanilla y Caléndula · Tomillo y Romero · Lavanda y Geranio
