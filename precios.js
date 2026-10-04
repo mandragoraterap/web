@@ -36,7 +36,7 @@ window.MANDRAGORA_PRECIOS = {
   spray_vainilla_mandarina: "14.000",     // Vainilla y Mandarina
 
   // Difusores para vehículos
-  difusor_vehiculos: "14.000",            // Difusores para vehículos
+  difusor_vehiculos: "5.000",            // Difusores para vehículos
 
   // Sahumerios ($2.800 c/u)
   sahumerio_rosas: "2.800",              // Rosas — Amor
